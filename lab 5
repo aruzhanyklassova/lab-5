@@ -1,0 +1,37 @@
+<script src=“main.js”></script>
+function getRandomInRange(min, max) { 
+  return Math.floor(Math.random() * (max - min + 1)) + min; 
+} 
+ 
+let column_1 = []; 
+let column_2 = []; 
+let column_3 = []; 
+let column_4 = []; 
+ 
+for (let i = 0; i < 30; i++) { 
+  let num1 = getRandomInRange(1, 10); 
+  let num2 = getRandomInRange(1, 10); 
+ 
+
+  let num3 = getRandomInRange(40, 100); 
+  let num4 = getRandomInRange(40, 100); 
+ 
+
+  column_1.push(num1); 
+  column_2.push(num2); 
+  column_3.push(num3); 
+  column_4.push(num4); 
+}
+
+let sum_1 = column_1.reduce((a, b) => a + b, 0); 
+let sum_2 = column_2.reduce((a, b) => a + b, 0); 
+let sum_3 = column_3.reduce((a, b) => a + b, 0); 
+let sum_4 = column_4.reduce((a, b) => a + b, 0); 
+ 
+let sums = [sum_1, sum_2, sum_3, sum_4]; 
+ 
+console.log(sums);
+ 
+let total_score = [column_1, column_2, column_3, column_4].flat().reduce((a, b) => a + b, 0); 
+ 
+console.log(total_score);
